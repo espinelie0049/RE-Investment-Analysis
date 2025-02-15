@@ -1,0 +1,123 @@
+{% extends "outline.html" %}
+
+
+{% block content %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+    <h2>Property Investment Calculator</h2>
+    <div class="form-container">
+        
+        <form class="input-column">
+            <h2>Inputs</h2>
+            <div class="input-container">
+                <label for="price">Property Price ($): </label>
+                <input type="number" id="price" required>
+            </div>
+
+            <div class="input-container" >
+                <label for="downpayment">Down Payment (%):</label>
+                <input type="number" id="downpayment" required>
+            </div>
+
+            <div class="input-container">
+                <label for="interest">Interest Rate (%):</label>
+                <input type="number" id="interest" required>
+            </div>
+
+            <div class="input-container">
+                <label for="term">Loan Term (Years):</label>
+                <input type="number" id="term" required>
+            </div>
+
+            <div class="input-container">
+                <label for="income">Monthly Rental Income ($):</label>
+                <input type="number" id="income" required>
+            </div>
+            
+            <div class="input-container">
+                <label for="expenses">Annual Expenses ($):</label>
+                <input type="number" id="expenses" required>
+            </div>
+
+            <button class="input-container" id="calculate">Investo patronum</button>
+
+        </form>
+
+
+
+
+
+        <div class="results-column" id="results">
+                <h2>Results</h2>
+            
+
+            <div class="result-container">
+                <p class="results">Purchase Price: <span id="purchase_price"></span></p>
+            
+
+                <p class="results">Principal Total: <span id="principal"></span></p>
+            
+            
+                <p class="results">Interest Total: <span id="int"></span></p>
+                
+
+                <p class="results">Total Loan Payment: <span id="total"></span></p>
+           
+            </div>
+
+
+
+
+            <div class="result-container">
+                <p class="results">Monthly Mortgage Payment: <span id="mortgage"></span></p>
+                
+                <p class="results">Monthly Expenses: <span id="monthExp"></span></p>
+
+
+                <p class="results">Monthly Cash Flow: <span id="cashflow"></span></p>
+
+                <p class="results">Break-Even:  <span id="BreakEven"></span></p>
+
+             </div>
+
+
+
+           
+
+            <div class="result-container">
+                <p class="results">Cap Rate: <span id="caprate"></span></p>
+
+                <p class="results">Cash-on-Cash Return: <span id="coc"></span></p>
+
+                <p class="results">ROI: <span id="roi"></span></p>
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+       <div class = "input-column">
+            <h2>Total Payment</h2>
+            <canvas id="myChart" style="width:100%; max-width:600px" class="canvas"></canvas>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+<button id="calulate">Investo Patronum</button>
+
+{% endblock %}

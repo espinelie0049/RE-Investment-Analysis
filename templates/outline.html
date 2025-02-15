@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
+        <Title> Outline</Title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+
+    </head>
+
+
+
+    <body>
+        <div class="header">
+            <a href="{{ url_for('home') }}" class="homelink">Investment Analys-isenator</a>
+        </div>
+        {% block content %}
+        {% endblock %}
+
+    </body>
+
+
+
+        <script src = "static/script.js"></script>
+</html>

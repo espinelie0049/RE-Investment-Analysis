@@ -1,0 +1,25 @@
+{% extends "outline.html" %}
+
+
+
+
+
+
+{% block content%}
+
+
+<div class="centertxt">
+    <h1> Analyze your property</h1>
+
+
+    <div class="tabsect">
+        <a class="tabs" href="{{ url_for('analysis') }}">Property Analysis</a>
+        <a class ="tabs" href="{{url_for ('npv') }}">NPV/IRR</a>
+        <a class = "tabs" href="{{url_for ('tmv') }}">TMV</a>
+    </div>
+</div>  
+
+
+{% endblock %}
+
+

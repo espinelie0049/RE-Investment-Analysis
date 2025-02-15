@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+}
+
+
+
+
+/* Top left link*/
+
+.homelink{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+.header{
+    background-color: black;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+/* Tabs and Text */
+.centertxt{
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+.tabsect{
+    padding: 20px;
+}
+
+
+.tabs{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.tabs:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+
+
+/* Calculator Styling*/
+
+
+.form-container{
+    display: flex;
+    justify-content: space-between; /* Ensures space between columns */
+    align-items: flex-start; /* Aligns columns to the top */
+    gap: 20px;
+}
+
+/*Rentor - Inputs*/
+label{
+    margin-right: 10px;
+}
+
+
+.input-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+/* Rentor - Inputs, Outputs, and Graph Columns */
+.inputs-column,
+.result-column,
+.canvas{
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+input {
+    width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-weight: normal;
+}
+
+
+/*Renter - OUTPUTS*/
+
+.results{
+    font-weight: normal;
+    font-size: large;
+}
+
+span{
+    font-weight: bolder;
+}
+
+.result-container{
+    border-style: solid; 
+    padding: 10px;
+    width: auto;
+}
+
+
+
+
+
+
+
+/*graph*/
+.graphtext{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    margin: 20px;
+}
+
+
+@media (max-width: 1000px){
+    .form-container{
+        flex-direction: column;
+    }
+    .inputs-column, .result-column, .canvas {
+        flex:none;
+        width:100%;
+    }
+}
+
+
+
+
+
+.form-container2{
+    display: flex;
+    align-items: flex-start; /* Aligns columns to the top */
+    gap: 150px;
+}
+
+
+.inputs-column2,
+.result-column2{
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+

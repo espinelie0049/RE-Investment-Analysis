@@ -1,0 +1,82 @@
+{% extends "outline.html" %}
+
+{% block content %}
+
+<body>
+    <h2>Time Value of Money Calculator</h2>
+    <h4>(Leave the function you want to solve for blank)</h4>
+
+    <div class="form-container2">
+        <form class="input-column2">
+
+            <h2>Inputs</h2>
+
+            <div class="input-container">
+                <label for="n">Term (Yrs): </label>
+                <input type="number" id="n">
+            </div>
+
+            <div class="input-container">
+                <label for="i">Interest (%): </label>
+                <input type="number" id="i">
+            </div>
+
+            
+            <div class="input-container">
+                <label for="pv">Present Value ($): </label>
+                <input type="number" id="pv">
+            </div>
+
+            <div class="input-container">
+                <label for="pmt">Payment ($): </label>
+                <input type="number" id="pmt">
+            </div>
+
+            <div class="input-container">
+                <label for="fv">Future Value ($): </label>
+                <input type="number" id="fv">
+            </div>
+
+            <button class="input-container" id="calculatetmv">Investo patronum</button>
+        </form>
+
+
+
+
+<div class="results-column2" id="results">
+            <h2>Results</h2>
+
+        <div class="result-container">
+            <p class="results"><span id="tmv_result"></span></p>
+
+        </div>
+
+
+
+
+        <!--<div class="results-column2" id="results">
+            <h2>Results</h2>
+
+        <div class="result-container">
+            <p class="results">N: <span id="n_result"></span></p>
+        
+            <p class="results">I/Y: <span id="i/y_result"></span></p>
+
+            <p class="results">PV: <span id="pv_result"></span></p>
+
+            <p class="results">PMT: <span id="i/y_result"></span></p>
+        
+            <p class="results">FV: <span id="fv_result"></span></p>
+        </div>-->
+
+
+
+    </div>
+
+</body>
+
+
+
+
+
+{% endblock %}

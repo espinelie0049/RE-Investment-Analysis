@@ -1,0 +1,78 @@
+{% extends "outline.html" %}
+{% block content %}
+
+
+<body>
+    <h2>Net Present Value Calculator</h2>
+
+    <div class="form-container2">
+        <form class="input-column2">
+
+            <h2>Inputs</h2>
+
+            <div class="input-container">
+                <label for="price">Price ($): </label>
+                <input type="number" id="price" required>
+            </div>
+
+            <div class="input-container">
+                <label for="cf1">CF 1 ($): </label>
+                <input type="number" id="cf1" required>
+            </div>
+
+            
+            <div class="input-container">
+                <label for="cf2">CF 2 ($): </label>
+                <input type="number" id="cf2" required>
+            </div>
+
+            <div class="input-container">
+                <label for="cf3">CF 3 ($): </label>
+                <input type="number" id="cf3" required>
+            </div>
+
+            <div class="input-container">
+                <label for="cf4">CF 4 ($): </label>
+                <input type="number" id="cf4" required>
+            </div>
+
+            <div class="input-container">
+                <label for="cf5">CF 5 ($): </label>
+                <input type="number" id="cf5" required>
+            </div>
+
+            <div class="input-container">
+                <label for="rate">Required Rate of Return (%): </label>
+                <input type="number" id="rate" required>
+            </div>
+
+            <button class="input-container" id="calculatenpv">Investo patronum</button>
+        </form>
+
+
+
+
+        <div class="results-column2" id="results">
+            <h2>Results</h2>
+
+        <div class="result-container">
+            <p class="results">NPV: <span id="npv_result"></span></p>
+        </div>
+
+        <div class="result-container">
+            <p class="results">IRR: <span id="irr_result"></span></p>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+
+
+
+
+{% endblock %}
