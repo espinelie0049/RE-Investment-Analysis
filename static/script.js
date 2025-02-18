@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const monthlyCashFlow = annualCashFlow / 12;
 
     // Calculate Cap Rate
-    const capRate = (income / price) * 100;
+    const capRate = ((income - expenses) / price) * 100;
 
     // Calculate Cash-on-Cash Return (CoC)
-    const cashOnCash = (annualCashFlow / downPaymentAmount) * 100;
+    const cashOnCash = ((income - expenses - (mortgagePayment * 12)) / downPaymentAmount) * 100;
 
     // Calculate ROI (simple estimate)
-    const roi = ((annualCashFlow + (price - downPaymentAmount) * capRate / 100) / downPaymentAmount) * 100;
+    const roi = (annualCashFlow / downPaymentAmount) * 100;
 
 
     const totalPmt = mortgagePayment * term;
@@ -66,9 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('total').textContent = `$${totalPmt.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} (over ${term/12} years)`;
 
 
+    document.getElementById('incomeresult').textContent = `$${monthlyincome.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     document.getElementById('mortgage').textContent = `$${mortgagePayment.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-    document.getElementById('cashflow').textContent = `$${monthlyCashFlow.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     document.getElementById('monthExp').textContent = `$${monthlyExp.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    document.getElementById('cashflow').textContent = `$${monthlyCashFlow.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     document.getElementById('BreakEven').textContent = BE < 0 ? "Property is losing money due to negative CF" : `${BE.toFixed(0)} Years`;
 
     document.getElementById('caprate').textContent = `${capRate.toFixed(2)}%`;
